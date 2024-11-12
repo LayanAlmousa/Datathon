@@ -2,12 +2,11 @@
 
 ## 👥 Team Members
 
-- **Sara Alkhoneen** – [<span style="padding: 8px 12px; background-color: #0077B5; color: white; border-radius: 4px; text-decoration: none;">Connect on LinkedIn</span>](https://www.linkedin.com/in/sara-alkhoneen-5a14a514a/){:target="_blank"}
-- **Layan Almousa** – [<span style="padding: 8px 12px; background-color: #0077B5; color: white; border-radius: 4px; text-decoration: none;">Connect on LinkedIn</span>](https://www.linkedin.com/in/layanalmousa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app){:target="_blank"}
-- **Retaj Alghamdi** – [<span style="padding: 8px 12px; background-color: #0077B5; color: white; border-radius: 4px; text-decoration: none;">Connect on LinkedIn</span>](https://www.linkedin.com/in/ritaj-alghamdi-7594092a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app){:target="_blank"}
-- **Anwar Alshamrani** – [<span style="padding: 8px 12px; background-color: #0077B5; color: white; border-radius: 4px; text-decoration: none;">Connect on LinkedIn</span>](https://www.linkedin.com/in/anwar-alshamrani-606702243/){:target="_blank"}
-- **Hend Alghamdi** – [<span style="padding: 8px 12px; background-color: #0077B5; color: white; border-radius: 4px; text-decoration: none;">Connect on LinkedIn</span>](https://www.linkedin.com/in/hendalghamdi/){:target="_blank"}
-
+- **Sara Alkhoneen** – [![LinkedIn](https://img.shields.io/badge/-Connect-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sara-alkhoneen-5a14a514a/)
+- **Layan Almousa** – [![LinkedIn](https://img.shields.io/badge/-Connect-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/layanalmousa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+- **Retaj Alghamdi** – [![LinkedIn](https://img.shields.io/badge/-Connect-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ritaj-alghamdi-7594092a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+- **Anwar Alshamrani** – [![LinkedIn](https://img.shields.io/badge/-Connect-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anwar-alshamrani-606702243/)
+- **Hend Alghamdi** – [![LinkedIn](https://img.shields.io/badge/-Connect-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hendalghamdi/)
 ---
 
 ## 🌐 Project Overview
