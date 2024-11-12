@@ -46,4 +46,4 @@ The name **Baian** has a clever play on words!
 
 ## 🖼️ System Overview Image
 
-
+<img width="901" alt="Screenshot 1446-05-10 at 7 18 55 AM" src="https://github.com/user-attachments/assets/a599a6a6-8857-4cb6-b834-d8457e2d2baf">
