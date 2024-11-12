@@ -45,5 +45,5 @@ The name **Baian** has a clever play on words!
 ## 📌 Additional Resources
 
 ## 🖼️ System Overview Image
-_(Placeholder for a visual representation of the Baian System)_
+
 
