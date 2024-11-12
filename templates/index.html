@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baian Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>    
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Baian</h2>
+      </div>
+      <button class="new-chat">Begin a New Chat +</button>
+      <div class="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="recent-chats">
+        <h3>Recent Chats</h3>
+        <ul id="recentChatsList"></ul>
+      </div>
+      <div class="user-profile">
+        <button>User Profile</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="scrollChat">
+        <div class="center-content">
+          <h1>How can we <span class="highlight">assist</span> you today?</h1>
+          <h2>كيف اقدر اخدمك اليوم؟</h2>
+          <p>
+            Get expert guidance powered by AI agents specializing in finance  ask anything !
+          </p>
+        </div>
+    
+        <div class="prompts">
+          <div class="prompt-card" onclick="setInput('How did the company equity change over the last year?')">How did the company equity change over the last year?</div>
+          <div class="prompt-card" onclick="setInput('How does the company manage credit risk in financial reporting?')">How does the company manage credit risk in financial reporting?</div>
+          <div class="prompt-card" onclick="setInput('What activities does the subsidiary focused on medical solutions perform?')">What activities does the subsidiary focused on medical solutions perform?</div>
+          <div class="prompt-card" onclick="setInput('What is the status of the company\'s cash flows from operations?')">What is the status of the company's cash flows from operations?</div>
+        </div>
+    
+        <div class="chat-box" id="chatBox"></div>
+      </div>
+    
+      <div class="chat-bar">
+        <textarea id="userInput" placeholder="Type your prompt here..."></textarea>
+        <button id="sendBtn" class="send-btn">➤</button>
+      </div>
+    </main>
+    
+  </div>
+
+  <script>
+    const chatBox = document.getElementById('chatBox');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    // Function to display a message
+    function displayMessage(message, sender) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+      messageDiv.textContent = `${sender === 'user' ? 'You: ' : 'Bot: '} ${message}`;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the latest message
+    }
+
+    // Function to handle sending a message
+    function sendMessage() {
+      const userMessage = userInput.value.trim();
+      if (userMessage) {
+        displayMessage(userMessage, 'user'); // Display user message
+        userInput.value = ''; // Clear the input
+
+        // Send the user message to Flask via AJAX
+        $.ajax({
+          type: 'POST',
+          url: '/query',
+          data: { query: userMessage },
+          success: function(response) {
+            // Display bot response
+            displayMessage(response.result, 'bot');
+          },
+          error: function() {
+            displayMessage("I'm sorry, there was an error. Please try again.", 'bot');
+          }
+        });
+      }
+    }
+
+    // Event listener for the send button
+    sendBtn.addEventListener('click', sendMessage);
+
+    // Optionally, allow Enter key to send the message
+    userInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault(); // Prevent default newline
+        sendMessage();
+      }
+    });
+
+    // Function to set the input value when clicking on a predefined question
+    function setInput(message) {
+      userInput.value = message;
+    }
+
+    // Clear chat history
+    function clearChat() {
+      chatBox.innerHTML = '';
+      $.ajax({
+        type: 'POST',
+        url: '/clear_chat',
+        success: function(response) {
+          console.log('Chat cleared.');
+        }
+      });
+    }
+
+    // Attach event listener to clear chat button
+    document.querySelector('.new-chat').addEventListener('click', clearChat);
+  </script>
+</body>
+</html>

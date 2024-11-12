@@ -1,0 +1,16 @@
+langchain
+langchain-community
+llama-parse
+fastembed
+chromadb
+python-dotenv
+langchain-groq
+chainlit
+fastembed
+unstructured[md]
+langchain-text-splitters
+langchain-huggingface
+unstructured
+unstructured[pdf]
+nltk
+pdfminer.six
